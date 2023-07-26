@@ -1,0 +1,178 @@
+#poke-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@font-face {
+    font-family: 'Shilla_CultureB-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poke-card {
+    font-family: 'Shilla_CultureB-Bold';
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    margin: 150px;
+    box-sizing: border-box;
+    transition: .4s;
+    box-shadow: rgba(166, 255, 188, 0.3) 0px 0px 30px 7px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+}
+
+.poke-card.active{
+    font-family: 'Shilla_CultureB-Bold';
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    box-sizing: border-box;
+    transition: .4s;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px 7px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+
+}
+
+.poke-img {
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn1,.btn2{
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    color: #0fa;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+}
+.btn1:active{
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    color: white;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+}
+.btn2:active{
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    color: white;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+}
+#inputDiv{
+    display: flex;
+    justify-content: center;
+}
+#inputDiv > input,button{
+    background-color: black;/*까만색(0,0,0) 80% 불투명도*/;
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 5px;
+    margin-right: 1rem;
+    color: white;
+}
+h1 {
+    font-family: 'Cafe24ClassicType-Regular';
+    font-size: 50px;
+    text-align: center;
+    color: lightgreen;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
