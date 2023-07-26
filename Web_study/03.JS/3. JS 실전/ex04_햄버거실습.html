@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>햄버거를 주문하자</h1>
+    <script>
+        /*
+           STEP 1
+        1-1. 햄버거를 제작하는 함수를 만들어라 : makeBurger 
+            (* 이 때, 화살표 함수를 이용해서 만들 것! )
+        1-2. 누군가가 햄버거를 만드는 함수를 호출하면 
+            문서에 (document.write) 빵깔기, 토마토올리기, 패티올리기, 빵닫기 
+            (* 이 때, 사용자가 희망한 메뉴의 패티를 올릴 것 
+            ex) 치즈버거 => 치즈패티 올리기 / 핫치킨버거 => 핫치킨 패티)
+        1-3. 햄버거의 가격은 5000원임. 5000원을 반환 (return)
+        */
+
+
+        const makeBurger = (menu) => {
+            document.write('빵 깔기<br>')
+            document.write('토마토 올리기<br>')
+            document.write(menu + '패티 올리기<br>')
+            document.write('빵 닫기<br>')
+            document.write(menu + '햄버거 완성<br>')
+            return 5000;
+
+        }
+
+        /* step 2
+            2-1 콜라를 만드는 함수를 작성, 가격 2000원
+                문서에 '콜라 완성!'
+            2-2 감자튀김을 만드는 함수를 작성, 가격은 1500원
+                문서에 '감튀 완성!'
+        
+        
+        */
+
+        const makeCoke = () => {
+            document.write('콜라 완성 <br/>')
+            return 2000;
+        }
+
+        const makePotato = ()=>{
+            document.write('감튀 완성<br/>')
+            return 1500;
+        }
+
+        //step3
+        //(1) 사용자에게 먹고 싶은 햄버거 메뉴를 입력받습니다
+        //          ex)불고기, 치즈, 핫크리스피..
+        let burgerMenu = prompt('어떤 햄버거를 주문하시겠습니까?')
+
+        //(2) 사용자에게 세트메뉴를 시킬지, 단품메뉴를 시킬지 입력받습니다.
+
+        let type = prompt('세트 or 단품')
+
+
+        /* step 4
+          4-1 만약 사용자가 단품이라고 입력했을 경우, 햄버거 함수만 호출
+          4-2 만약 사용자가 세트라고 입력했을 경우, 햄버거/콜라/감튀 함수 모두 호출
+          4-3 맨 마지막 줄에는 '지불하실 가격은 xxxx원입니다.'
+        */
+        let price = 0;
+
+        if (type === '단품' || type ==='단품메뉴') {
+            price = makeBurger(burgerMenu)
+        }else if (type ==='세트'){
+            price = makeBurger(burgerMenu) + makeCoke() + makePotato()
+        }
+        document.write(`지불하실 가격은 ${price}입니다.`)
+
+    </script>
+</body>
+
+</html>

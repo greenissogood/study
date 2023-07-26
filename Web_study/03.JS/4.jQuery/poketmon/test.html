@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+    <script>
+
+        let speciesList = [];
+        let pokemonList = [];
+        let cnt = 0;
+
+        const leftB = () => {
+
+            `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i + 1}.png"
+                alt="" class="poke-img">
+                <span class="poke-id">${cnt+1}</span>
+                <span class="poke-name">${speciesList[cnt].name}</span>
+                <span class="poke-species">${speciesList[cnt].genus}</span>
+                <span class="poke-height">身長 : <span>${pokemonList[cnt].height / 10}</span> m</span>
+                <span class="poke-weight">体重 : <span>${pokemonList[cnt].weight / 10}</span> kg</span>`
+
+        }
+        $('.poke-card').html;
+    </script>
+</body>
+
+</html>

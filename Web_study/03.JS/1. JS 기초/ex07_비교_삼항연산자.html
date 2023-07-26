@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //비교연산자
+        // ==, !=, >=, <=, >,<
+        
+        // === !== 강력한 비교일 때는 같은지 다른지만 존재한다!
+        // 일치연산자 타입까지 일치한지
+        let num1 = 10;
+        let num2 =10;
+        console.log(num1 >= num2);//true
+        console.log(num1 != num2);//false
+
+        //조건연산자 (삼항연산자)
+        //조건식 ? true일 때 실행 : false일 때 실행
+        console.log(num1==num2? '같은숫자입니다':'다른숫자입니다')
+
+        let a = 10 + 7 + ""; //17 숫자끼리 먼저 더해서
+        let b = 8 + "" + 2; //82 숫자+문자열은 문자열 '8'+숫자열 2
+        let c = "" + 5 + 2; //52 문자열 '5'+숫자열 2
+        console.log(a)
+        console.log(b)
+        console.log(c)
+    </script>
+</body>
+</html>

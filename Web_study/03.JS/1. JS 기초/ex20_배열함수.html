@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let likelist = ['강아지', '감자탕', '영어', '게임', '플레이브']
+        document.write('제가 좋아하는 것은 ', likelist,'입니다.')
+        document.write('<hr>')
+
+        // 1. 자신이 좋아하는 것을 5가지 담은 배열을 생성 
+        // 2. 배열 출력하기 (document.write) 
+        //     제가 좋아하는 것은 ~,~,~,~,~ 입니다! 
+        
+        // 3. 배열의 마지막 요소를 제거하시오.
+        // 4. 배열 출력하기 (document.write) 
+        //     제가 좋아하는 것은 ~,~,~,~ 입니다! 
+        
+        // 5. 배열의 마지막 요소에 '코딩' 추가 
+        // 6. 배열 출력하기 (document.write) 
+        //     제가 좋아하는 것은 ~,~,~,~,코딩 입니다! 
+        
+        // 7. 배열 속 코딩이 존재하는지 확인 => document.write 
+        //     "저는 코딩을 좋아합니다!" 출력
+        
+        // 8. 기존 배열 속 인덱스 1번부터 3개의 데이터를 삭제 
+        // 9. 최종 배열 출력하기 (document.write) 
+        //     제가 좋아하는 것은 ~,코딩 입니다! 
+
+        // let unit = likelist.splice(4,1)
+        // document.write('제가 좋아하는 것은 ', ${likelist},'입니다.')
+        // document.write('<hr>')
+
+        // likelist.push('코딩')
+        // document.write('제가 좋아하는 것은 ',likelist,'입니다.')
+        // document.write('<hr>')
+
+        // likelist.includes('코딩')
+        // document.write('저는 코딩을 좋아합니다.')
+        // document.write('<hr>')
+
+        // likelist.splice(0,3)
+
+        // likelist.splice(0,4)
+        // document.write('제가 좋아하는 것은', likelist[1],' 입니다!')
+        // document.write('<hr>')
+
+
+        // likelist.pop()
+        // document.write('제가 좋아하는 것은 ', ${likelist},'입니다.')
+        // document.write('<hr>')
+
+        //5 6
+        likelist.push('코딩')
+        document.write(`제가 좋아하는 것은 ${likelist}입니다.`)
+        document.write('<hr>')
+
+       //7
+        likelist.includes('코딩')
+        ? document.write('저는 코딩을 좋아해요.')
+        : document.write('저는 코딩 싫어요!')
+
+        document.write('<hr>')
+
+        // 8
+        likelist.splice(1,3)
+
+        //9
+        document.write(`제가 좋아하는 것은 ${likelist} 입니다.`)
+        document.write('<hr>')
+
+
+
+
+    </script>
+</body>
+</html>

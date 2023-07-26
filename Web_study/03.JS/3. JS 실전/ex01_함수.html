@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        add(10, 20)
+
+
+        //함수: 특정 기능을 따로 빼놓는 것
+        //--> 필요할 때마다 불러와서 사용할 수 있다!
+        //함수 구조 ->함수 선언문
+        //리턴과 매개변수는 생략 가능하다!
+        // 매개변수는 지역변수이다
+
+        function add(num1, num2) {
+            //실행로직
+            let result = num1 + num2
+            //반환값
+            console.log(result)
+            return result;
+        }
+
+        //함수를 호출했다 -> 이 위치로 반환받겠습니다.
+        add(10, 20)
+
+        // function hello() {
+        //     console.log('hello Javascript')
+        // }
+        // hello()
+
+        //minus, mul(곱하기),div(나누기)
+        //각각의 함수를 만들어서
+        //결과값을 출력시켜 주세요! (10,20)
+
+        function minus(num1, num2) {
+            // let result = num2-num1 실행로직이라는걸보여준거임/안써도됨
+            return num1 - num2;
+        }
+        function mul(num1, num2) {
+            return num1 * num2;
+
+        }
+        function div(num1, num2) {
+            return num1 / num2;
+        }
+
+        let number1 = 10;
+        let number2 = 20;
+        let op = '+';
+
+        //num1,num2 숫자
+        //oper -> 연산자
+        function cal(num1, num2, oper) {
+            let result = 0;
+            //oper에 담긴 값에 따라서
+            //num1과 num2의 연산 결과값을 반환해 주는 기능
+            if (oper == '-') {
+                result = minus(num1 - num2);
+            }
+            else if (oper == '+') {
+                result = num1 + num2;
+            }
+            else if (oper == '*') {
+                result = num1 * num2;
+            }
+            else {
+                result = num1 / num2;
+            }
+            return result;
+        }
+        console.log(cal(number1, number2, op))
+
+        //호이스팅 현상으로 인해 함수를 선언하기 이전에
+        // 함수 호출이 가능하다=>> 방지
+        // var는 let으로 방지
+        // 바뀌면 안 되니까 const
+
+        // const makejuice = function () {
+        //     console.log('쥬스 제조 완성')
+        // }
+        
+        // --화살표 함수 (arrow function)
+        /*
+        const 함수이름 = (매개변수)=>{
+            로직
+        }
+        */
+
+        //const makejuice = function()=>{}
+        const makejuice = ()=>{
+            console.log('쥬스 제조 완성')
+        }
+
+
+        makejuice()
+
+
+
+
+
+    </script>
+</body>
+
+</html>

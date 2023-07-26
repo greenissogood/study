@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //정렬 알고리즘
+        //1. 버블정렬
+        //
+
+        let arr = [10, 1, 6, 8, 3]
+
+        // if (arr[0] > arr[1]) {
+        //     //치환 사라지기 전에 넣어두려고
+        //     let temp = arr[0];
+        //     arr[0] = arr[1];
+        //     arr[1] = temp;
+
+        // }
+        // console.log(arr)
+
+        // if (arr[1]> arr[2]) {
+        //     let temp = arr[1];
+        //     arr[1] = arr[2];
+        //     arr[2] = temp;
+        // }
+        // console.log(arr)
+
+        // if (arr[2]> arr[3]) {
+        //     let temp = arr[2];
+        //     arr[2] = arr[3];
+        //     arr[3] = temp;
+        // }
+        // console.log(arr)
+
+        // if (arr[3]> arr[4]) {
+        //     let temp = arr[3];
+        //     arr[3] = arr[4];
+        //     arr[4] = temp;
+        // }
+        // console.log(arr)
+
+        //i = 0 1 2 3
+        //i+1 = 1 2 3 4
+
+        //1 step
+        for (let i = 0; i <= 3; i++) {
+            if (arr[i] > arr[i + 1]) {
+                //치환 사라지기 전에 넣어두려고
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+
+            }
+            console.log(arr)
+        }
+        console.log('============================')
+        //2step
+        // 0>1, 1>2, 2>3
+        // i = 0 1 2
+        // i+1 = 1 2 3
+        for (let i = 0; i <= 2; i++) {
+            if (arr[i] > arr[i + 1]) {
+                //치환 사라지기 전에 넣어두려고
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            console.log(arr)
+
+        }
+        console.log('================================')
+        //3step
+        // i = 0 1
+        // i+1 =  1 2
+        for (let i = 0; i <= 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            console.log(arr)
+        }
+        console.log('================================')
+        //4step
+        // i = 0
+        // i+1 = 1
+
+        for (let i = 0; i <= 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            console.log(arr)
+        }
+        console.log('================================')
+
+
+        for (j = 3; j >= 0; j--) {
+            for (let i = 0; i <= j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    let temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+                console.log(arr)
+            }
+        }
+
+        for (let J = arr.length - 2; j >= 0; j--) {
+            for (let i = 0; i <= j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    let temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                }
+                console.log(arr)
+            }
+        }
+
+        bubblesort();
+
+        //함수 => 코드의 재사용
+        function bubblesort() {
+            for (let j = arr.length - 2; j >= 0; j--) {
+                for (let i = 0; i <= j; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        let temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                    console.log(arr)
+                }
+                console.log('==========================')
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

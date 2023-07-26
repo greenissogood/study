@@ -1,0 +1,31 @@
+/* shift+tab: 내어쓰기 */
+/* CSS언어를 사용할 수 있는 태그 */
+/* 
+    table태그: 너비 400px
+    tr태그: 배경색 gray, 높이 50px ( Step1~4 )
+    tr태그: 배경색 whitesmoke, 높이 35px
+    td태그: 글자정렬 right (각 행의 제목에 해당하는 태그만)
+    textarea태그: 크기조절 none
+    td태그: 가운데정렬(마지막 요소)
+*/
+table {
+    width: 400px;
+}
+
+.tr-tit {
+    background-color: gray;
+    height: 50px;
+}
+
+.tr-content {
+    background-color: whitesmoke;
+    height: 35px;
+}
+
+.tr-content>td:first-child {
+    text-align: right;
+}
+
+.tr-content:last-child>td {
+    text-align: center;
+}

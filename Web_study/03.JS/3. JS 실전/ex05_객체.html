@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //객체(object) : 속성과 값으로 구성되어 있는 데이터의 집합
+
+        //1. 객체의 선언
+        //객체의 괄호 : 중괄호 {}
+        let person = {
+            name: '최똥자',
+            birthYear: 2015,
+            group: '가족'
+        }
+
+        //2. 객체의 출력
+        console.log(person)
+
+        //3. 객체 내 데이터에 접근하는 방법
+        //  case 1) 객체이름.key 이름 ★
+        console.log('이름은?', person.name)
+        //  case 2) 객체이름['key이름']
+        console.log('속해있는 그룹은?', person['group'])
+
+        //4. 객체 내 데이터 변경하기
+        person.name = '최예니'
+        console.log('obeject', person)
+
+        //배열 안에 객체를 넣을 수 있고, 객체 안에 배열을 넣을 수 있다!
+        // (1) 배열 안에 객체를 넣어 보자!
+        let orderlist = [{
+            name: '닐라닐라바닐라',
+            place: 'takeout',
+            stamp: true
+
+        }, {
+            name: '베리베리스트로베리',
+            place: 'here',
+            stamp: false
+
+        }, {
+            name: '멜론멜론워터멜론',
+            place: 'here',
+            stamp: true
+
+        }]
+
+        console.log('배열 안에 객체', orderlist)
+        //만약 '베리베리스트로베리'를 출력?
+        //배열에 접근 => 객체에 접근
+        //배열이름[인덱스번호].key값
+        console.log(orderlist[1].name)
+
+        //(2) 객체 안에 배열을 넣어보자!
+        let person2 = {
+            name : '최선화',
+            feature : ['엄마','똥자','플레이브']
+        }
+
+        console.log(person2)
+        //만약 '똥자'를 출력?
+        //객체에 접근 => 배열에 접근
+        console.log(person2.feature[1])
+
+        //--신문법 time [비구조화 할당]
+        let {mom, me, yenny} = {
+            mom : '교촌허니콤보',
+            me : '뿌링클',
+            yenny : '솜리치킨'
+        }
+        
+        console.log(me)
+
+
+    </script>
+</body>
+
+</html>

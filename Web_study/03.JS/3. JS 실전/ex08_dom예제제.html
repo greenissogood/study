@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1Tag">클릭 한번 해볼까요?</h1>
+    <button id="h1Btn" onclick="ckh1Btn()">h1태그 생성</button>
+    <button id="aBtn" onclick="ckaBtn()">a태그 생성</button>
+    <button id="ulBtn" onclick="ckulBtn()">ul태그 생성</button>
+    <div id="box"></div>
+
+    <script>
+        /*
+        누른 버튼에 따라 각각 다른 값들이 id 가 box인 div안에 누적돼도록 
+        만약 => h1Btn => <h1>h1입니다.</h1>
+            => aBtn =>  <a href="www.google.com">Google로 이동</a>
+            => ulBtn => <ul><li>마라탕</li></ul>
+        */
+
+        const ckh1Btn = ()=>{
+            console.log('h1 btn');
+        }
+        const ckaBtn = ()=>{
+            console.log('a btn');
+        }
+        const ckulBtn = ()=>{
+            console.log('ul btn');
+        }
+    </script>
+
+</body>
+</html>

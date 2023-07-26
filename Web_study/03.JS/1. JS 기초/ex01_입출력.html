@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript : 웹페이지를 동적으로 제어하기 위해 고안된 언어
+        // (1) : body 태그 가장 하단에 작성한다.
+        // (2) : 주석 = ctrl + /
+        // 만약 한줄씩이 아니라 여러 줄을 주석으로 만들고 싶다면?
+            /* => 다중 주석 처리 가능 */
+
+            /* 1. 출력문 */
+            // a. console.log() - console 창에 출력 
+            // ★★★★★ 개발자 도구=> console★★★★★
+            console.log('Hello World!')
+
+            // a-2. console.error()
+            console.error('Error!!!')
+
+            // a-3. console.warn()
+            console.warn('WARNING!!')
+
+            // b. document.write() - 문서에 출력
+            // 거의 사용되지 않는다
+            document.write("안녕 디지몬")
+
+            // c. alert() - 알림 팝업창에 출력
+            // 얘가 가장 먼저 뜬다 콘솔이 제일 나중에 뜸 오류 나면 콘솔이 안 뜸
+            // alert('뭘 봐')
+
+            // 2. 입력문
+            // a. 입력창을 통한 입력문(주관식) : prompt
+            //      리턴 타입이 (string) 문자 형태 (돌아오는 파일이 문자 형태)
+            //      숫자 123을 적더라도 prompt를 통해 받은 값이라면
+            //      무조건 string 형태
+            var dinner = prompt('어제 저녁 뭐 드셨나요?', '곱창전골')
+            console.log('어제 저녁은',dinner,'입니다.')
+            // var                  num         =       3;
+            // 변수 선언 키워드     변수명      대입     값
+            // 저장하는 데이터에 따라서 자료형을 결정한다.
+            
+            
+            // b. 예/아니오를 묻는 입력문 : confirm
+            //      리턴 타입은 (boolean) true/false
+            var lunch = confirm('그러면 저랑 오늘 점심 드실래요?')
+            console.log(lunch)
+
+            
+            
+    </script>
+</body>
+</html>

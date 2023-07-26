@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*반복문
+        - 우리는 왜 반복문이 필요할까?
+        - 개발자가 하기 싫어하는 일 => 같은 일 반복해서 하는 거
+
+        (1) for문
+        - for ~ 하는 동안
+        for (초기화식 ; 종료조건 ; 증감식){
+            반복할 때까지 실행할 로직
+        }
+        - 계속해서 현재 상황, 조건을 비교하며 만족시킬 때까지 반복을 진행한다.
+        */
+
+        // console.log(1)
+        // console.log(2)
+        // console.log(3)
+        // console.log(4)
+        // console.log(5)
+
+        // for(let i = 1; i <=5 ; i++){
+        //     console.log('for :', i)
+        // } 
+        /*let i는 1초기화 1부터 시작 i가 5가 되면 멈출 거다 ++하나 늘리기*/
+            
+
+        /* 위 코드가 실행되는 흐름
+        1) 내 반복문의 카운터 역할을 하는 i의 초기값을 1로 지정
+        2) 현재 상태 i=1 / 조건에 만족/ => i++실행 / => 출력 **조건 i가 6이 될 때까지 반복
+        3) 현재 상태 i=2 / 조건에 만족/ => i++실행 / => 출력
+        ...(반복)...
+        4) 현재 상태 i=6/ 조건에 만족하지 않음/ => for문 탈출!
+        */
+
+        // 예제! 1부터 1000까지 더한 값을 문서에 출력(document.write())
+        //      결과) 1부터 1000까지 더한 값을 500500입니다.
+
+       
+       let sum = 0;
+         //0으로 초기화
+         //전역변수
+
+
+        for(let i=1; i <=1000; i++){
+            sum += i;
+        }
+        //지역변수
+        document.write('1부터 1000까지 더한 값은' ,sum, '입니다.');
+
+        console.log('sum :',sum)
+        console.log('i :', i)
+        // 지역변수(특정부분 존재)와 전역변수(스크립트 안에 어디에서도 사용가능하다)의 차이
+        //시장과 대통령의 차이
+
+        
+    </script> 
+</body>
+</html>

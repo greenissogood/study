@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //1.
+        //사용자가 입력한 값을 num 에 저장시키고
+        //num 에 있는 값이 짝수라면 -> '짝수입니다' 출력
+        //num 에 있는 값이 홀수라면 -> '홀수입니다' 출력
+        let num = parseInt(prompt('숫자입력'))
+        if(num%2==0){
+            console.log("짝수입니다")
+        }
+        else{
+            console.log("홀수입니다")
+        }
+
+        //2. 
+        //사용자가 입력한 값을 num 에 저장시키고
+        //1의 자리에서 반올림한 결과를 출력하세요(기준 5)
+        //(일의 자리가 5보다 크거나 같다면 올림)
+        //(일의 자리가 5보다 작다면 내림)
+        //ex num = 153 -> 150출력 , num= 158 -> 160출력
+        let num1 = parseInt(prompt('숫자입력'))
+        if(num1%10 >= 5){
+            num1 = num1-num1%10;
+            console.log('결과 : ' +( num1+10))
+        }
+        else{
+            num1 = num1-num1%10;
+            console.log('결과 : '+num1)
+        }
+    </script>
+</body>
+</html>

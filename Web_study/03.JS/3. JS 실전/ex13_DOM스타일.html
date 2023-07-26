@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1_style {
+            color : yellowgreen;
+            background-color: black;
+
+        }
+
+        .btn_style {
+            width: 150px;
+            height: 50px;
+            border: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM 스타일 속성 실습
+
+        <button>스타일 변경</button>
+
+        <!-- javascript -->
+        <script>
+            // 스타일 변경 방법
+            // 요소객체.style.스타일속성 = 값
+            let h1tag = document.getElementsByTagName('h1')[0];
+            let btn = document.getElementsByTagName('button')[0];
+
+            //버튼을 클릭했을 때, h1요소의 스타일을 변경하는 이벤트
+            // -> 글자색: 노란색 / 배경색: 검정색
+
+            // +버튼에 클래스 속성 추가하기
+            btn.addEventListener('click', () => {
+                //간단한 스타일 변경은 자바스크립트 코드로 구현
+                // h1tag.style.color = 'lightpink';
+                // h1tag.style.backgroundColor = 'salmon';
+
+                h1tag.setAttribute('class', 'h1_sytle')
+
+                //스타일 속성이 많아질 경우에는
+                //id나 class 속성을 추가하여 구현
+
+                btn.setAttribute('class', 'btn_style')
+            });
+        </script>
+    </h1>
+</body>
+
+</html

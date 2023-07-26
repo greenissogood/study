@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 자료형 : 데이터의 형태
+        
+        1) 기본 유형
+        */
+
+        // (1) 숫자형 : 정수, 실수 등 산술연산이 가능한 자료형(number)
+
+        // **타입을 알 수 있는 방법?
+        // a. typeof()
+        // b. console창의 색상
+
+        // 문자 + 숫자 => 문자화되니까 조심하기~ 콜론 말고 플러스 썼을 때 말하는 거
+        let num1 = 3;
+        console.log('숫자형:', typeof(num1))
+        let num2 = 3.14;
+        console.log('숫자형:', typeof(num2))
+
+        // (2) 문자형(string)
+        // 큰 따옴표(""), 작은 따옴표('')로 묶어서 나타내는 데이터
+        // 숫자를 따옴표로 감싸더라도 문자가 된다.
+        // prompt의 리턴타입은 string 형태
+        let name= '최선화';
+        console.log('문자형:',name)
+
+        // (3) 논리형(boolean)
+        // 참(true), 거짓(false) 2가지 값만 존재하는 유형
+        // 이때 true, false는 모두 소문자로만 표현
+        // ''안에 담으면 true라는 문자열이 된다.
+        let isOpen = true;
+        console.log('논리형:', isOpen)
+
+        // 2. 특수유형
+        // (1) undefined: 정의가 되지 않았다. -없고 없었고 계속 없을 거
+        //     => 선언만 되고, 초기 값이 할당되지 않은 상태
+        // JS는 동적으로 타입을 정의해 주는 언어이기 때문에
+        // 처음에 데이터를 넣지 않고 선언한다면 undefined의 형태가 됨
+        // ex) 여자 친구 있어요? 아니오 없어요 있었는데? 아니오 없어요
+            // => undefined
+
+        let data; //절대로 이렇게 선언하지 말 것
+        console.log('undefined:', data)
+
+        // (2) null: 비워져 있을 때 - 있다가 없는 거
+        //      의도적으로 그 공간을 비워줄 때
+        let money = 3000;
+        money=null;
+        console.log('null:',null)
+
+    </script>
+</body>
+</html>

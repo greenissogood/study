@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{width: 1024px; height: 768px;}
+        /* #header{height: 134px; background-color: red;} */
+        #nav{
+            height: 134px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #nav > div >a{
+            color: black;
+            text-decoration: none;
+            /* 요소의 크기 조절은 하고 싶은데 위치는 그대로 두고 싶은 경우 */
+            display: inline-block;
+            width: 100px;
+            height: 35px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #container{display: flex;}
+        #content{width: 724px; height: 500px; background-color: blue;}
+        #side{width: 300px; height: 500px; background-color: yellow;}
+        #footer{height: 134px; background-color: green;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="nav">
+                <div>
+                    <a href="#">SMHRD</a>
+                </div>
+                <div>
+                    <a href="#">메뉴</a>
+                    <a href="#">서비스</a>
+                    <a href="#">고객지원</a>
+                </div>
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+        </div>
+        <div id="container">
+            <div id="content">content</div>
+            <div id="side">side</div>
+        </div>
+    </div>
+    <div id="footer">footer</div>
+    
+</body>
+</html>

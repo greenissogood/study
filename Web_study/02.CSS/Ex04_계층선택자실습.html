@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자손선택자*/
+        dl span{color: palevioletred;}
+        dl li{color: mediumaquamarine;}
+        
+        /* 자식선택자 */
+        ol>span{
+            color:bisque;
+        }
+        /* 형제(근접후행)선택자 */
+        li+li{
+            color:salmon;
+        }
+        /* #first+li{ 
+            color: red;
+        }*/
+
+        /* 
+            클래스 이름으로 접근할 때, 요소 이름을 앞에 붙여 준다.
+            다른 요소에 동일한 클래스 이름이 사용되고 있을 수 있기 때문
+        */
+        li.first + li{
+            color: salmon;
+        }
+        
+        /* 형제(후행)선택자 */
+        li~li{
+            background-color: greenyellow;
+        }
+        /* #first~li */
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>연수생 수칙</dt>
+        <dd>
+            <ol>
+                <li id="first" class="first">지각하지 않기</li>
+                <li>결석하지 않기</li>
+                <span>(불가피할 땐 꼭 담당연구원에게 미리 말하기)</span>
+                <li>복습하기</li>
+            </ol>
+        </dd>
+    </dl>
+</body>
+</html>

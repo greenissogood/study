@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- key : ecc10f50ca023c15814ea5d69d4da02a -->
+    <!-- 지도를 표시할 div 입니다 -->
+    <div id="map" style="width:100%;height:350px;"></div>
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ecc10f50ca023c15814ea5d69d4da02a"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+//         STEP 1. 여러분들만의 관광지도를 만들어 보자
+//             - 인공지능사관학교 35.1468, 126.9222
+//                 - 동명동 맛집 35.1477, 126.9179
+//                     - kt 식당 35.1465, 126.9237
+
+//                   => 마커를 찍어보기
+//                  인공지능사관학교를 중심으로 3개가 다 보이도록
+
+//                  위도경도 찾는 방법
+//                    구글 지도에서 내가 원하는 지점 핑
+//                     => 오른쪽 마우스 주변검색
+    </script>
+
+</body>
+
+</html>

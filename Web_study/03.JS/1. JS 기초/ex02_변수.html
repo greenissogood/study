@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         console.log('var:',name)
+         var name = '최똥자';
+       
+        /* 변수 : 데이터를 담는 공간 
+        변수 키워드 변수 이름 = 담을 데이터
+        ex) var num = 3
+
+        - 호이스팅 : 코드가 실행되면 메모리에 변수/함수 미리 저장해 둔다.
+                    마치 출석 체크를 하듯이!
+                    => 협업에 있어서 불편함을 주게 됨
+
+                이를 방지하고자, ES6문법 이후 새로운 변수가 등장하게 된다.
+                - let, const
+                    let 과 var의 차이점을 알아야 된다.
+        
+        ** 면접 질문! 'var와 let의 차이점을 아시나요?'
+        A. let은 ES6문법에서 새로 등장한 키워드로
+            호이스팅을 방지하기 위해 선언 전에는 TDZ에 데이터를 보관
+            협업을 하는 데에 잇어서 유리한 환경을 제공한다.
+
+        */
+       //(0) var
+       // - 재선언이 가능
+       // - 재할당 또한 가능
+       // - 호이스팅 현상 O (일어난다)
+        var name = '최선화'; //선언
+        name = '최똥자'; //할당
+        console.log('var:', name)
+        // 콘솔 닷 로그 바로 뽑을 데이터 네임입니다.
+
+        //(1)let
+        // let 도 호이스팅이 일어나기는 하지만
+        // TDZ(Temporal Death Zone)에 저장을 해 두고
+        // 선언이 되기 전까지는 접근을 못 하게 한다.
+
+        let name2 = '장원영'
+        // let name2 = '안유진'- 재선언 불가
+        name2 ='레이'; //재할당 가능
+        console.log('var:',name2)
+
+        // (2) const : 상수, 변하면 안 되는 값
+        const name3 ='김채원';
+        // 이게 선언
+        // const name3= '사쿠라'; - 재선언 불가
+        // name3 = '카즈하'; - 재할당 불가
+        
+        /* 변수 이름을 지어보자!
+        1) 첫 글자로 숫자를 사용할 수 없다 (ex. 1name, 2apple)
+        2) 변수명의 첫 글자는 영문자, $, _ 가능
+        3) JS의 예약어는 변수명으로 사용할 수 없다 (ex. let, if, for)
+        4) 의미 없는 변수명은 추천 X (ex. a, b, c, d)
+        5) camelCase 사용 (첫 단어 소문자로 시작 / 대문자로 시작)
+            ex) JS - userName, python - user_name
+        */
+       
+    </script>
+</body>
+</html>

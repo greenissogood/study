@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>jQery 라이브러리 다루기!</h1>
+    <p>날씨가 구려서 코딩할 맛이 안 나는걸?</p>
+
+    <button>눌러잇</button>
+
+    <!-- jQery 파일 불러오기 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script>
+
+        //h1 요소 찾아오기!
+        //JS버전
+        let h1Tag = document.getElementsByTagName('h1');
+        console.log(h1Tag[0].innerText)
+
+        //jQuery 버전
+        //$(선택자)
+        //  - jQuery객체(배열)로 찾아온다!
+        console.log(jQuery('h1').innerText)
+
+
+        //$().text() : 요소의 내용을 변경할 때
+        //$().html() : 요소의 내용을 변경할 때(태그 포함)
+        // console.log($('h1').text(jQuery 내용 변경해 보기"));
+        // console.log($('h1').html("<a href='#'>jQuery로 내용 변경해 보기!</a>"));
+        // $("#tit").html("<a href='#'>jQuery로 내용 변경해 보기!</a>");
+        // $("h1+p").html('은우야 졸면 안 돼');
+
+        
+        
+        //jQuery로 스타일 변경해 보기!
+
+        //적용할 함수들을 .로 이어서 붙인 후 실행하는 방식
+        // -> 메소드 체인
+        $('p').css('color', 'salmon')
+            .css('font-size', '100px')
+            .text('은우만 코딩하자!');
+
+        // $('p').css({
+        //     'color':'salmon',
+        //     'font-size':'100px',
+        // });
+
+        //jQuery로 이벤트 적용해 보기
+        $('button').on('click', ()=>{
+            alert('누구세요?');
+        })
+
+
+
+    </script>
+</body>
+
+</html>

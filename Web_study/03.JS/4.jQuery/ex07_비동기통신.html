@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            border: solid 1px;
+            font-weight: bold;
+            background-color: orange;
+        }
+        td{
+            text-align: center;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="result-area">
+        <table border="1px" solid>
+        <tr>
+            <th>순위</th>
+            <th>영화명</th>
+            <th>개봉일</th>
+        </tr>
+    </table></div>
+
+    <button id="req-button">누르지 마세요</button>
+    <!-- jQery 파일 불러오기 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script>
+
+        //데이터 요청 클릭 시, 동작하는 이벤트 적용해 보기!
+        $('#req-button').on('click', () => {
+            // alert('콳시')
+
+            let movieURL ="https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20230621"
+            //$.ajax() : 비동기통신을 지원하는 함수
+            $.ajax({
+                url: movieURL,
+                success: (result) => {
+                    alert('누르지 말라고 했지!');
+                    console.log(result);
+                    console.log(result.boxOfficeResult);
+                    console.log(result.boxOfficeResult.dailyBoxOfficeList);
+
+                    let movieList=result.boxOfficeResult.dailyBoxOfficeList;
+
+                    //박스오피스 순위, 영화 이름, 개봉일을 콘솔창에 출력해 보기!
+                    for(let i=0; i<movieList.length;i++){
+                        // console.log(movieList[i].rank);
+                        // console.log(movieList[i].movieNm);
+                        // console.log(movieList[i].openDt);
+                        console.log(`${movieList[i].rank}).${movieList[i].movieNm}(${movieList[i].openDt}`)
+                        $('table').append(`<tr><td>${movieList[i].rank}</td><td>${movieList[i].movieNm}</td><td>${movieList[i].openDt}</td></tr>`)
+
+                        //table형태로 웹 페이지에 출력해 보기!
+                        /*let resultHTML = `<tr>
+                                                <td>${movieList[i].rank}</td>
+                                                <td>${movieList[i].movieNm</td>
+                                                <td>>${movieList[i].openDt</td>
+                                            </tr>`;
+                        &('table').append(resultHTML);
+
+                        */
+
+
+                    }
+
+                },
+                    error:()=>{
+                        alert('요청 실패..');
+                    }
+                });
+        })
+        
+
+    </script>
+</body>
+
+</html>

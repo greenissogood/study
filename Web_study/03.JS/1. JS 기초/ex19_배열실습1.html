@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numlist = [9,55,88,77,23,15,10]
+
+        let maxNum =0
+
+        for(let i=0;i<numlist.length;i++){
+            console.log(numlist[i])
+            if(numlist[i]>maxNum){
+                maxNum = numlist[i]
+            }
+        }
+
+        document.write('배열 내 최대값은', maxNum)
+
+        let maxNum2 = math.max(...numlist);
+        document.write('배열 내 최대값은', maxNum2)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 남예준, 도은호, 채봉구
+
+        /*
+        let peroson1={
+            name : '남예준',
+            age : 21
+        }
+        let person2={
+            name:'도은호',
+            age: 20
+        }
+        let peroson3={
+            name:'채봉구',
+            age: 20
+        }
+        */
+
+
+        /*
+        Class와 Object를 함께 사용
+        Class : 각 개체가 가진 정보를 추상화하여 만든 설계도
+        Object : 클래스로부터 탄생한 객체
+
+        */
+        // 1. class를 선언해 보자!
+        class person{
+            //생성자 -> 클래스로 객체를 생성할 때
+            //          꼭 가져가야 하는 데이터(변수)를 초기화할 때 사용하는 기능
+            constructor(name, age){
+                this.name = name ;
+                this.age = age;
+            }
+
+
+            //함수
+            speak(){
+                console.log(`제 이름은 ${this.name}입니다.`)
+            }
+        }
+
+        // 2. 우리가 만든 Class (붕어빵 틀)을 통해서
+        //    실존하는 Object (붕어빵)을 만들어 보자!
+        let person1 = new person ('남예준', 21)
+        console.log(person1);
+        person1.speak
+
+        let person2 = new person ('도은호', 20)
+        console.log(person2);
+        person2.speak
+
+        let person3 = new person ('채봉구', 20)
+        console.log(person3);
+        person3.speak
+
+        //객체 생성 실습!
+        // GameChar라는 클래스를 하나 생성
+        // => 이름(name) 체력(hp) 마력(mp)
+        // => 공격(attack) 이라는 기능 존재
+
+        // 이름이 티모인 체력 30, 마력 70인 객체를 만들자
+        // alert 캡틴 티모 공격~! 이라고 띄워주겠다!
+
+        class GameChar{
+            constructor(name, hp, mp){
+                this.name = name;
+                this.hp = hp;
+                this.mp = mp;
+            }
+            attack(){
+                alert(`캡틴 ${this.name}를 찢어!!`)
+            }
+        }
+        let char1 = new GameChar('티모',30,70)
+        char1.attack()
+    </script>
+</body>
+
+</html>

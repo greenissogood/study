@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 일단 바디 태그에 작성 form은 method get--> 
+    <form method="get" action="">
+        id <input type="text" name="id" placeholder="아이디를 입력해 주세요" autofocus><br/>
+        pw <input type="password" name="pw" maxlength="12"><br>
+        소속<input type="text" name="lc" value="인공지능" readonly>
+        
+        <h3>다른 점이 무엇이냐</h3>
+        <p>정처기 고민- 여러개 선택 가능</p>
+        합격 <input type="checkbox" name="goal" value="suc">
+        불합격 <input type="checkbox" name="goal" value="fail">
+        취소 <input type="checkbox" name="goal" value="can">
+
+        <p>정처기 합격 - 중복 불가</p>
+        합격 <input type="radio" name="goal" value="suc">
+        불합격 <input type="radio" name="goal" value="fail">
+        취소 <input type="radio" name="goal" value="can">
+
+        <input type="text">
+        <select>
+            <option>큐티</option>
+            <option>빠띠</option>
+            <option>섹시</option>
+        </select>
+
+        <input type="file"><br>
+        <input type="color"><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br>
+
+        <h3>제출 및 초기화</h3>
+
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+</body>
+</html>

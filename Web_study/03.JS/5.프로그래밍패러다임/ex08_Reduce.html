@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // reduce(), reduceRight()
+        // - 하나의 배열이 있다고 가정했을 때, 그 배열을 누적시켜서 하나 값을 만들어 준다.
+
+        const arr = [1,2,79,3,4,5];
+
+        // 누적값
+        // 숫자가 사악 돌아가면서 들어갔다 나옴
+        const result1 = arr.reduce((x,y)=>x+y)
+        console.log(result1);
+        
+        // 최대값
+        const result2 = arr.reduce((x,y) => x>y ? x : y)
+        console.log(result2);
+
+        // 문자열 뒤집기
+        let str = '로꾸거 로꾸거 로꾸거 말해말'
+        
+        let strArr = [...str].reduceRight((x,y) => x+y)
+        console.log(strArr);
+
+    </script>
+</body>
+</html>

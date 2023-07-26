@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.0.js"></script>
+    <style>
+        #wrap {
+            display: flex;
+
+        }
+
+        #poke-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @font-face {
+            font-family: 'Shilla_CultureB-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poke-card {
+            font-family: 'Shilla_CultureB-Bold';
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            height: 300px;
+            width: 200px;
+            margin: 200px;
+            box-sizing: border-box;
+            transition: .4s;
+            box-shadow: rgba(166, 255, 188, 0.3) 0px 0px 30px 7px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+        }
+
+        /* .poke-card.active {
+            font-family: 'Shilla_CultureB-Bold';
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            height: 300px;
+            width: 200px;
+            margin: 200px;
+            box-sizing: border-box;
+            transition: .4s;
+            box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px 7px, rgba(255, 255, 255, 0.15) 0px 1px 3px 1px;
+
+        } */
+
+        .poke-img {
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+        }
+
+        @font-face {
+            font-family: 'Cafe24ClassicType-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'Cafe24ClassicType-Regular';
+            font-size: 50px;
+            text-align: center;
+            color: lightgreen;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>ポケモン</h1>
+        <!-- <div>
+            <button class="btn1">左</button>
+            <button class="btn2">右</button> -->
+        </div>
+        <div class="poke-card">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+                alt="" class="poke-img">
+            <span class="poke-id">1</span>
+            <span class="poke-name">이상해씨</span>
+            <span class="poke-species">씨앗포켓몬</span>
+            <span class="poke-height">身長 : <span>0.7</span> m</span>
+            <span class="poke-weight">体重 : <span>6.9</span> kg</span>
+        </div>
+    <div>
+        <input type="text" id="inputC">
+        <button id="inputBtn">입력</button>
+    </div>
+    <div id="wrap">
+        <button id="Btn1">좌</button>
+        <div id="pageContents">페이지</div>
+        <button id="Btn2">우</button>
+    </div>
+    <script>
+        let pageList = [];
+        let cnt = 0;
+        let page = "";
+
+        const inputF = () => {
+            for (let i = 0; i < parseInt($("#inputC").val()); i++) {
+                pageList.push(`${i}번째 배열`);
+            }
+            console.log(pageList);
+        }
+
+
+        const leftP = () => {
+            console.log('leftBtn')
+            cnt--;
+            $("#pageContents").html(`<span>${pageList[cnt]}</span>`);
+
+        }
+        const rightP = () => {
+            console.log('rightBtn')
+            cnt++;
+
+            $("#pageContents").html(`<span>${pageList[cnt]}</span>`)
+        }
+
+        $("#inputBtn").on("click", inputF);
+        $("#Btn1").on("click", leftP);
+        $("#Btn2").on("click", rightP);
+
+
+    </script>
+</body>
+
+</html>

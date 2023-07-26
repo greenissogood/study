@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>input태그 값 가져오기</h2>
+    <input type="text" id="inputText">
+    <button id="inputBtn">GET!</button>
+
+    <h2>이미지 태그 값 가져오고 바꿔보기 </h2>
+    <img width="300px"
+        src='https://mblogthumb-phinf.pstatic.net/20140203_119/dhwlsry33_1391413857161vTLIi_JPEG/dreamwiz_com_20140203_164842.jpg?type=w2'>
+    <br />
+    <button id="handlePic">change</button>
+
+
+    <script>
+
+
+        // ** input 태그 내에 사용자가 입력한 값을 가져와 보자!
+        // 1-1) input 버튼에 이벤트 걸기
+        document.getElementById('inputBtn').addEventListener('click', () => {
+            // ==============get 버튼을 눌렀을 때, console창에 ck!===========
+            // 1-2) input 안에 있는 값을 가져올 것
+            console.log('ck');
+            let inputTag = document.getElementById('inputText')
+            console.log('input:', inputTag.value);
+
+            // 1-3) value 값을 세팅
+            inputTag.value = '';
+
+        })
+
+        //**img 태그에 접근하고 수정해 보자!
+        // 1-1) 현재 imgTag의 속성 값을 출력
+        let pic1 = document.querySelectorAll('img')[0]
+        console.log('pic:', pic1)
+
+        //case 1. getAttribute('속성이름')
+        console.log('사진의 너비는?', pic1.getAttribute('width'))
+        console.log('사진의 주소는?', pic1.getAttribute('src'))
+
+        //case 2. .속성이름
+        console.log('사진의 너비는?', pic1.width)
+        console.log('사진의 주소는?', pic1.src)
+
+        // 1-2) change 버튼을 클릭했을 때, 사진이 변하도록
+        document.querySelector("#handlePic").addEventListener('click', () => {
+
+
+            // // case 1. .setAttribute('속성이름','바꿀값')
+            // pic1.setAttribute('width', '400px')
+
+            // //case 2. .속성이름 = '값'
+            // pic1.src='http://www.lampcook.com/wi_files/food_key_img/101205.jpg'
+
+            // Quiz! 만약 버튼 클릭 시, 사진 1이라면 사진2로 사진2라면 사진 1로 변경
+            //          => 단톡방에 캡처, 1,2 중에 본인이 더 좋아하는 사진으로!
+
+
+            console.log(pic1.src)
+                if(pic1.src==='https://mblogthumb-phinf.pstatic.net/20140203_119/dhwlsry33_1391413857161vTLIi_JPEG/dreamwiz_com_20140203_164842.jpg?type=w2'){
+                    pic1.src = 'http://www.lampcook.com/wi_files/food_key_img/101205.jpg'
+                }else{
+                    pic1.src = 'https://mblogthumb-phinf.pstatic.net/20140203_119/dhwlsry33_1391413857161vTLIi_JPEG/dreamwiz_com_20140203_164842.jpg?type=w2'
+                }
+
+        })
+
+    </script>
+</body>
+
+</html>

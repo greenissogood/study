@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 지금부터 가위바위보를 시작하겠습니다 
+        // STEP 1. 컴퓨터가 랜덤하게 가위, 바위, 보 중에 하나를 낸다 (comChoice)
+        //          => Math.random() -> ranNum 
+        //          => 배열의 인덱스 번호
+
+        // STEP 2. 사용자에게 가위, 바위, 보 중에 하나를 입력받는다 (prompt) (myChoice)
+        //          "무엇을 내시겠습니까? [가위,바위,보]"
+
+        // ** comChoice, myChoice를 console창에 테스트 출력! 
+
+        // STEP 3. 가위바위보의 결과를 출력 
+        // document.write('당신의 승리입니다') /패배 / 무승부입니다!
+
+
+        let myChoice = prompt('무엇을 내시겠습니까? [가위], [바위], [보]')
+        let rpc = ['가위', '바위', '보']
+
+        console.log(comChoice)
+        console.log(myChoice)
+
+        let comChoice = parseInt(Math.random() * 3)
+
+
+
+        let result = ''//결과
+        if (myChoice === comChoice) {
+            result = '무승부'
+        }
+        else if (myChoice === '보') {
+            result = comChoice === '바위' ? '승리' : '패배'
+        }
+        else if (myChoice === '가위') {
+            result = comChoice === '보' ? '승리' : '패배'
+        }
+        else if (myChoice === '바위') {
+            result = ccomChoice === '가위' ? '승리' : '패배'
+        }
+
+    //    // while(true){
+    //         if(comChoice == myChoice){
+    //             document.write('무승부!')
+    //         }
+
+    //     //}
+
+
+
+
+    </script>
+</body>
+
+</html>

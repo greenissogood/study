@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let g = 4, s = 1; g >= 1; g--, s += 2) {
+            for (let i = 1; g >= i; i++) {
+                document.write('&nbsp')
+            }
+            for (let j = 1; j <= s; j++) {
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+        for (let j = 2, k = 5; j <= 4; j++, k -= 2) {
+            for (let i = 1; i <= j; i++) {
+                document.write('&nbsp')
+            }
+            for (let i = 1; i <= k; i++) {
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+
+
+    </script>
+</body>
+
+</html>

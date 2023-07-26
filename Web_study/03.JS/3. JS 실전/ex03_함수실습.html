@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let startNum = 2;
+        let endNum = 30;
+        //2부터 30까지 숫자 중에 소수만을 고르고 싶다
+
+        getPrimeNumber(startNum, endNum)
+        //defined 정의되지 않았다
+
+        function getPrimeNumber(sNum, eNum) {
+            let cnt=0; //약수의 개수
+            let arr=[];
+            //기능 만들어 준다 두가지를 받아서 특정한 기능을 만들 거다
+            for (let i = sNum; i <= eNum; i++) {
+                cnt
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        cnt++;
+                    }
+                }
+                if (cnt == 2) {
+                    arr.push(i)
+                    //자기가 자기자신으로 나눴을 때 약수의 개수가 2일때니까 소수
+                }
+                else {
+                    console.log("소수가아닙니다")
+                }
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

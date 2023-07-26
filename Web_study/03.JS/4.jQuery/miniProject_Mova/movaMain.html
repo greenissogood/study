@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVA</title>
+    <style>
+        *{
+            border: 1px solid red;
+            font-family: 'Pretendard-Regular';
+        }
+        /* 웹폰트 */
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal; 
+        }
+        body{
+            /* background-image: url(./img/mova_main.jpg); */
+            /* background-color: black;             */
+        }
+
+        /* 헤더 시작 */
+        .header{
+            display: flex;
+            background-color: rgba(36, 40, 59, 0.4);
+        }
+        .logo{
+            border: 1px solid red;
+            margin-left: 5%; 
+        }
+        .logo img{
+            width: 200px;
+        }
+        .headerBtn{
+            font-family: 'Pretendard-Regular';
+            font-size: 30px;
+            color: #ffffff;
+            margin: 30px 0 0 30px;
+        }
+
+        /* 메인 비디오 배경 */
+        .jb-box { width: 100%; height: 900px; overflow: hidden;margin: 0px auto; position: relative; padding: auto;}
+        video { width: 100%; }
+        .jb-text { position: absolute; top: 40%; width: 100%; }
+        .jb-text p { margin-top: -24px; text-align: center; font-size: 48px; color: #ffffff; background-color: rgba(36, 40, 59, 0.4); }
+        
+        /* 시작버튼 */
+        .start{
+            text-align: center;
+        }
+        .startBtn{
+            border-radius: 10px;
+            font-size: 50px;
+            background-color: rgba(36, 40, 59, 0.8); 
+                /* 백그라운드 투명도 rgba (0, 0, 0, 0.2) */
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="logo""><img src="./img/logo/mova_background.png" alt="로드실패"></div>
+        <div class="headerBtn">영화성향분석</div>
+        <div class="headerBtn">현재 상영작</div>
+        <div class="headerBtn">올해 흥행작</div>
+    </header>
+    
+    <main>
+        <div class="jb-box">
+            <video muted autoplay loop>
+              <source src="./video/marvel_intr.mp4" type="video/mp4">
+              <strong>Your browser does not support the video tag.</strong>
+            </video>
+            <div class="jb-text">
+                <p>너 오늘 MOVA ?</p>
+                <div class="start"><button class="startBtn">시작 하기</button></div>
+                
+                
+            </div>
+          </div>
+    </main>
+
+    
+    <footer></footer>
+</body>
+</html>

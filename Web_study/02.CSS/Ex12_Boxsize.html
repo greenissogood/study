@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Box sizing 요소의 크기를 화면에 표시하는 방식 */
+        div{
+            /* 내가 설정한 너비 */
+            width: 500px;
+            
+            /* 경계선 */
+            border: 20px solid gray;
+            
+            /* 안쪽 여백 */
+            padding: 20px;
+        }
+        /* (1) content-box : 기본값 
+            - 내가 설정한 너비 = content의 너비
+            ex) "너비 500px로 해줘!" => content 500px
+            -패딩, 보더값을 전혀 신경쓰지 않는다. 값이 들어가면 들어간 만큼 크기가 커진다.
+        
+        
+            (2) boder-box 패딩 줘도 사이즈 변화 없으면 좋겠다 할 때 쓰면 됨.
+            - 내가 설정한 너비 = border 안쪽까지의 너비
+            - content + padding + border = 내가 설정한 너비
+            - 패딩, 보더 값이 들어가도 크기가 커지지 않는다.
+
+            만약에 내가 padding, border 값을 주더라도
+            전체 도형의 크기가 영향을 받지 않았으면 좋겠다?
+            => box-sizing : border-box
+            */
+
+            .bb{
+                box-sizing: border-box;
+            }
+    </style>
+</head>
+<body>
+    <div class="cb">
+        <p>content-box</p>
+    </div>
+    <div class="bb">
+        <p>border-box</p>
+    </div>
+</body>
+</html>

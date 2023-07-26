@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text">
+        <select id="puppy">
+            <option value="말티즈">말티즈</option>
+            <option value="비숑">비숑</option>
+            <option value="시츄">시츄</option>
+            <option value="시고르자브종">시고르자브종</option>
+            <option value="푸들">푸들</option>
+            <option value="진돗개">진돗개</option>
+        </select>
+        <input type="button" value="출력">
+    </form>
+
+    <p id="result"></p>
+    <p>강아지: <span id = 'selected_puppy'></span></p>
+
+
+    <!-- jQuery 파일 불러오기 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script>
+        //속성선택자
+        $("input[type='button']").on('click', () => {
+            // alert('클릭');
+            // 입력요소의 값을 가져오려면? val() 사용!
+            let $userInput = $("input[type='text']").val();
+            console.log($userInput);
+
+            //유저가 입력한 값을 웹 페이지에 출력해 보기!
+            //jQuery객체.text활용
+            $('#result').text($userInput);
+        });
+
+        //select 태그의 내용이 바뀔 때 동작하는 이벤트
+        $('#puppy').on('change', () => {
+            console.log($('#puppy').val());
+            let $puppy=$('#puppy').val();
+
+            //선택한 강아지의 정보를 웹 페이지에 출력하기!
+            $('#selected_puppy').text($puppy);
+        })
+
+    </script>
+</body>
+
+</html>

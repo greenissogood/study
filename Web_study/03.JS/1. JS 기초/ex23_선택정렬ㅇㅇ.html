@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //     let arr = [13,56,9,1,23];
+        // let base = 0;
+
+        // // 1 step -> 기준 0
+        // base = arr[0];        
+        // for(let i=1; i<=4; i++){
+        //     if(base > arr[i]){
+        //         let temp = base;
+        //         base = arr[i];
+        //         arr[i] = temp;
+        //     }
+        // }
+        // arr[0] = base;
+
+        // console.log(arr)
+
+        // // 2 step -> 기준 1
+        // base = arr[1];
+        // for(let i=2; i<=4; i++){
+        //     if(base > arr[i]){
+        //         let temp = base;
+        //         base = arr[i];
+        //         arr[i] = temp;
+        //     }
+        // }
+        // arr[1] = base;
+
+        // console.log(arr)
+
+        // // 3 step -> 기준 2
+        // base = arr[2];
+        // for(let i=3; i<=4; i++){
+        //     if(base > arr[i]){
+        //         let temp = base;
+        //         base = arr[i];
+        //         arr[i] = temp;
+        //     }
+        // }
+        // arr[2] = base;
+
+        // console.log(arr)
+
+        // // 4 step -> 기준 3
+        // base = arr[3];
+        // for(let i=4; i<=4; i++){
+        //     if(base > arr[i]){
+        //         let temp = base;
+        //         base = arr[i];
+        //         arr[i] = temp;
+        //     }
+        // }
+        // arr[3] = base;
+
+        // console.log(arr)
+
+        let arr = [13,56,13,9,1,23,19,100];
+        let base = 0;
+
+        for(let j=0; j<=arr.length-2;j++){
+            base = arr[j];        
+            for(let i=j+1; i<=arr.length-1; i++){
+                if(base > arr[i]){
+                    let temp = base;
+                    base = arr[i];
+                    arr[i] = temp;
+                }
+            }
+            arr[j] = base;
+            console.log(arr)
+        }
+
+
+    </script>
+</body>
+</html>

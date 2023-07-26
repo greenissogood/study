@@ -1,0 +1,156 @@
+
+<!-- 회원가입 & 로그인을 관리하는 페이지
+- 담당자 : 최머시기
+(23/06/08 12: 30 누구누구 수정 - 중복체크 추가)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Ex01_style.css"
+   
+
+    <!-- <style>
+        /* css 언어를 사용할 수 있는 태그*/
+        /* 
+            table태그 : 너비 400px
+            tr태그 : 배경색 gray, 높이 50px (step1~4)
+            tr태그 : 배경색 whitesmoke, 높이 35px
+            td태그 : 글자정렬 right(각 행의 제목에 해당하는 태그만)
+            textarea태그 : 크기조절 none
+            td태그 :  가운데정렬(마지막 요소)
+        */
+        table{
+            width: 400px;
+        }
+        .tr-tit{
+            background-color: green;
+            height: 50px;
+        }
+        .tr-content{
+            background-color: aquamarine;
+            height: 35px;
+        }
+        .tr-content > td:first-child{
+            text-align: right;
+        }
+        .tr-content : :last-child > td{
+            text-align: :center;
+        }
+    </style> -->
+</head>
+<body>
+    
+    <!-- 주석 다는 습관 들여야 됨.
+        회원가입 폼
+        => action : ~ 기능으로 간다
+    -->
+    <form action="#" method="get">
+        <table width="400px">
+            <!-- step 1 시작 -->
+            <!-- (tr>td*2)*4 -->
+            <tr class="tr-tit"></tr>
+                <th colspan="2" align="left">Step 1 : 아이디/비번 입력</th>
+            </tr>
+            <tr class="tr-content">
+                <td>아이디</td>
+                <td><input type="text"/>
+                </td>
+            </tr>
+            <tr class="tr-content">
+                <td >비밀번호</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr class="tr-content">
+                <td>비밀번호 확인</td>
+                <td><input type="password"></table></td>
+            </tr>
+            <!-- step 1 끝 -->
+        
+            <table width="400px">
+            <!-- step 2 시작 -->
+            <!-- (tr>td*2)*4 -->
+            <tr class="tr-tit"></tr>
+                <th colspan="2" align="left">Step 2 : 개인정보</th>
+            
+            </tr>
+            <tr class="tr-content">
+                <td>성별</td>
+                <td>
+                    남성 <input type="radio" name="gender" value='man'/>
+                    여성 <input type="radio" name="gender" value='woman'/>
+
+                </td>
+            </tr>
+            <tr class="tr-content">
+                <td>혈액형</td>
+                <td>
+                    <select>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>O</option>
+                        <option>AB</option>
+                    </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td>생일</td>
+                <td><input type="date"></table></td>
+            </tr>
+            <!-- step 2끝 -->
+        <table width="400px">
+            <!-- step 3시작 -->
+            <!-- (tr>td*2)*4 -->
+            <tr class="tr-tit"></tr>
+                <th colspan="2" align="left">Step 3 : 선호도</th>
+            
+            </tr>
+            <tr class="tr-content">
+                <td >취미</td>
+                <td>
+                    축구<input type="checkbox" name="hobby" value="sc"/>
+                    야구<input type="checkbox" name="hobby" value="bs"/>
+                    농구<input type="checkbox" name="hobby" value="bk"/>
+                </td>
+            </tr>
+            <tr class="tr-content">
+                <td>좋아하는 색깔</td>
+                <td><input type="color"></td>
+    
+            
+            <!-- step 3 끝 -->
+        
+           
+            <!-- step 4시작 -->
+            <!-- (tr>td*2)*4 -->
+            <tr class="tr-tit"></tr>
+
+                <th colspan="2" align="left">Step 4 : 적고 싶은 말</th>
+            </tr>
+        
+            <tr class="tr-content">
+                <td colspan="2">
+                    <!-- style ="resize:none;"는 크기 조절을 하지 못하게 하는 코드 -->
+                    <textarea cols="56" rows="5" style="resize: none"></textarea>
+                </td>   
+            </tr>
+            <tr class="tr-content">
+                <td colspan="2">
+                    <input type="submit" value="제출">
+                    <input type="reset" value="초기화">
+
+                </td>
+            
+        
+            <!-- step 4 끝 -->
+
+
+        </table>
+        
+
+    </form>
+    
+</body>
+</html>

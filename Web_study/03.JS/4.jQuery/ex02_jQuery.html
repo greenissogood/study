@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            font-size: 48px;
+            border : 10px;
+            color : white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="box">미래</button>
+    <!-- jQuery 파일 불러오기 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script>
+
+        //클릭했을 때, 박스의 스타일을 변경하는 이벤트
+        $('button').on('click', ()=>{
+            $('button').css({
+                'background-color':'black',
+                'width': '500px',
+                'height': '500px'
+            }).text('');
+            // $('button').html('')
+        })
+
+    </script>
+</body>
+
+</html>

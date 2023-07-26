@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border : 3px solid salmon;
+            display: inline-block;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        span{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+   <h1><span>구구단을 외워보즈아앙~!</span></h1>
+   
+   
+    <script>
+    //미션! console 창에 1단~ 9단까지를 출력
+        
+    for (let i= 2; i <=9 ; i++){
+    console.log(i+'단')
+    document.write("<div>")
+    document.write('<h1>'+i+'단</h1>')
+    
+            /*이중 for 문, 중첩 for문
+            - 구구단은 2단~ 9단까지
+                => 그 안에서 각 단마다 1~9까지
+            */
+        for(let j=1 ; j <=9 ; j++){
+            console.log('j', j)
+            document.write(i+'X'+j+'='+i*j)
+            document.write('<br/>')
+        }
+
+        document.write('</div>')
+
+    }
+   </script> 
+</body>
+</html>

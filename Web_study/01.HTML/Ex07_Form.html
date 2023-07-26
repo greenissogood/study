@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 태그
+    웹페이지에서 입력폼을 만들 때 사용하는 태그
+    사용자에게 정보를 받아주는 태그
+    -필수 속성 2가지 :  method(전달 방식), action(전달 위치)
+    -->
+    <form method="get" action="#">
+
+        <!-- input 태그 : 사용자가 입력할 수 있도록 공간
+        
+        **속성
+            (1) name : 입력한 값을 구분하기 위해서 이름을 지정
+            (2) placeholder : 미리보기 텍스트
+            (3) autofocus : 자동 커서 설정
+            (4) value : 기본값 설정
+            (5) readonly : 읽기 전용 지정
+            (6) maxlength : 글자 수 제한 지정
+    -->
+        <h3>입력</h3>
+        ID <input type="text" name="id" placeholder="아이디를 입력하시오." autofocus> <br/>
+        PW <input type="password" maxlength="12"> <br/>
+        소속 <input type="text" name="lec" value="인공지능사관학교" readonly>
+
+        <h3>선택</h3>
+        <!--
+            1. input 태그, type 속성이 checkbox
+            2. input 태그, type 속성이 radio
+            3. select 태그
+        -->
+
+        <!-- checkbox와 radio 비교
+        - 필수 속성이 2가지 존재
+        - name : 어떤 설문인지?
+        - value : 어떤 값인지?
+        -->
+
+        <!-- (1)checkbox : 중복 선택이 가능하다 -->
+        <p>좋아하는 메뉴를 모두 골라 주세요.</p>
+        짜장면 <input type="checkbox" name="menu" value="jjajang"/>
+        탕수육 <input type="checkbox" name="menu" value="tangsu"/>
+
+        <!-- (2)radio : 중복 선택이 불가능하다 -->
+        <p>성별을 골라 주세요.</p>
+        남성 <input type="radio" name="gender" value="man"/>
+        여성 <input type="radio" name="gender" value="woman"/>
+
+        <!-- (3)select 태그
+        => option이라는 태그가 필요하다-->
+        <input type="text"/>
+        <select>
+            <option>@gmail.com</option>
+            <option>@naver.com</option>
+            <option>@hanmail.net</option>
+        </select>
+
+
+        <h3>그 외</h3>
+        <input type="file"/> <br/>
+        <input type="color"/> <br/>
+        <input type="number"/> <br/>
+        <input type="range"/> <br/>
+        <input type="date"/> <br/>
+        <input type="datetime-local"/>
+
+        <h3>제출 및 초기화</h3>
+        <!-- 제출 및 초기화 되는 정보는 무조건 form 태그 시작 ~ 끝 
+            제출 및 초기화하는 버튼의 위치는 무조건 form 태그 안쪽
+        -->
+
+        <input type="submit"/>
+        <input type="reset"/>
+
+
+    </form>
+</body>
+</html>

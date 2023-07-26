@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Map 함수
+        - 배열함수의 한 종류
+        - 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다
+        */
+        let arr1 = [1,2,3,4];
+        // 만약 내가 arr1 안에 있는 모든 데이터를 *2 해 주고 싶다면? map 함수 이용
+        // let newArr1 = arr1.map((item)=>{return item*2})
+        let newArr1 = arr1.map(item=>item*2)
+        console.log('새로 생성한 배열', newArr1);
+
+        // Q. 선생님 이름 목록을 만들어 보자!
+        let nameArr =['황해도','선영표','정봉균'];
+
+        // 황해도 선생님, 선영표 선생님, 정봉균 선생님이라는 데이터가 포함된
+        // 새로운 배열을 만들어 주고 싶다!
+        // 단, for문을 이용 X, map 함수를 이용해서 문제를 해결해 보자!
+
+        // let newNameArr = nameArr.map((item,idx)=>(idx+1)+'번째 ' +item+' 선생님')
+
+        // 인자가 한 개일 때는 그냥 작성, 인자가 두 개일 때는 (item,idx)
+        // 명령문이 return 한 줄일 때는 람다식 이용 가능, 두 줄 이상일 때는 {return}
+        let newNameArr = nameArr.map((item,idx)=>{
+            console.log('새로운 배열이다!');
+            return (idx+1)+'번째 ' +item+' 선생님'
+        })
+        console.log('이름', newNameArr);
+
+        // 객체가 들어있는 배열도 map으로 관리해 보자
+        let studentList = [
+            {name : '김유열', score : 90},
+            {name : '이명인', score : 100},
+            {name : '정은우', score : 80},
+        ]
+        
+        const toHalf = (obj)=>{
+            return{
+            // 기존 객체 값 중, 변화가 없는 나머지 속성은 그대로 유지!
+            // 스프레드 ...
+                ...obj,
+                score : obj.score/2}
+        }
+       const mappedList = studentList.map(toHalf)
+       console.log(mappedList);
+
+            //도시의 화씨 데이터를 섭씨 데이터로 변환해 보자!
+            //섭씨 = 5/9*(화씨-32)
+
+        const cityArr= [
+            {city : 'seoul', temp : 86},
+            {city : 'gwanju', temp : 89},
+            {city : 'gunsan', temp : 90},
+        ]
+
+        // 화씨 데이터를 섭씨 데이터로 변환한 결괏값을 캡처해서 단톡방에 욜려보자!
+        // 단, 도시 이름은 그래도 유지가 되어야 한다.
+
+        const change = (obj)=>{
+            return{
+                ...obj,
+                temp : parseInt(5/9*(obj.temp-32))
+            }
+        }
+
+        const mappedCity = cityArr.map(change)
+        console.log(mappedCity);
+
+
+    </script>
+</body>
+</html>

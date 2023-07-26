@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //배열 내 최댓값 구하기!
+        //반복문
+        let numList = [9, 55, 88, 77, 23, 15, 10]
+
+        // 결과 : 배열 내 최댓값은 88입니다.
+        let maxNum = 0;
+
+        for (let i = 0; i < numlist.length; i++) {
+            console.log(numlist[i])
+            if (numList[i] > maxNum) {
+                maxNum = numlist[i]
+            }
+        }
+
+        document.write('배열 내 최댓값은', maxNum)
+
+        let maxNum2 = Math.max(...numlist);
+        document.write('배열 내 최댓값은', maxNum2)
+
+    </script>
+</body>
+
+</html>

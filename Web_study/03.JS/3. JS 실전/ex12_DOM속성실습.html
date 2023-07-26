@@ -1,0 +1,59 @@
+<html lang="en">
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name">
+    <button id="btn">변경!</button>
+    <img src="https://img.allurekorea.com/allure/2022/11/style_636df79253f91-1136x1200.png" width="200px">
+    <script>
+        // 수지사진
+        let url1 = 'https://img.allurekorea.com/allure/2022/11/style_636df79253f91-1136x1200.png'
+        // 아이유사진
+        let url2 = 'https://cdn.mhns.co.kr/news/photo/201710/80596_134727_1149.png'
+
+        //step 1. '변경' 버튼 클릭 시, 사용자가 input 태그 안에 입력한 값을 감지
+        // 1-1) 변경이라는 버튼을 눌렀을 때
+        document.querySelector('#btn').addEventListener('click', () => {
+            console.log('ck');
+
+            // 1-2) input 태그 안에 있는 값을 가져와서 name이라는 변수에 넣어 줄 것
+            let name = document.querySelector('#name')
+            console.log('name',name);
+            // 1-3) 만약, name이 아이유라면 아이유 사진으로 / name이 수지라면 수지 사진으로 변경
+            // 만약 다른 사진 원하면 다른 사진
+            // 1-4) 조건 이외의 텍스트 입력 시, alert 잘못 입력하셨습니다!
+
+            let img = document.getElementsByTagName('img')[0]
+            if(name.value === '아이유'){
+                //아이유 사진
+                img.src = url2
+            } else if (name.value === '수지'){
+                //수지 사진
+                img.src = url1
+            }
+
+            name.value='';
+        })
+
+
+        
+        // document.getElementById('btn').addEventListener('click',()=>{
+        //     console.log('ck');
+        //     let inputTag = document.getElementById('img')
+        //     console.log('input:', name.value);
+
+        //     name.value = '';
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

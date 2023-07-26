@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 절차지향 프로그래밍을 통해 자판기 프로그램을 만들어 보자!
+
+        // 1. 자판기 객체 생성 (돈통, 물, 콜라, 주스)
+        let machine = {
+            money: 0,
+            water: 5,
+            coke: 10,
+            juice: 7
+        }
+
+        // 두 번째 자판기 생성!
+        let machine2 = {
+            money: 0,
+            water: 5,
+            coke: 10,
+            juice: 7
+        }
+        // 2. 사용자에게 돈을 입력받아 준다. ('돈을 넣어 주세요!')
+        let money = parseInt(prompt('돈을 넣어 주세요!'))
+        console.log(money);
+        // 3. 사용자에게 제품을 입력받아 준다.
+        //      (무엇을 드시겠습니까? [1]물 - 700원 [2] 콜라 - 1500원 [3] 주스 - 2000원)
+        let menu = prompt('무엇을 드시겠습니까? [1]물 - 700원 [2] 콜라 - 1500원 [3] 주스 - 2000원')
+        console.log(menu);
+        // 4. 제품을 꺼내주는 함수를 생성 exportProduct
+        //  4-1) 사용자가 넣은 돈 만큼 돈통이 채워진다.
+        //  4-2) 사용자가 어떤 제품을 선택했느냐에 따라 다르게 적용
+        //  4-3) 사용자가 선택한 제품 만큼 돈을 빼 주고, 사용자가 선택한 제품의 재고를 빼 준다.
+        //  4-4) 팝업창에 '물 나왔습니다!'
+
+        // 제품을 꺼내주는 함수 
+        function exportProduct() {
+                console.log('export Product Function')
+                machine.money += money;
+                if (menu == 1) {
+                    machine.money = machine.money - 700
+                    machine.water--;
+                    alert('물 나왔습니당~')
+                }
+                else if (menu == 2) {
+                    machine.money = machine.money - 1500
+                    machine.coke--;
+                    alert('콜라 나왔습니당~')
+                }
+                else if (menu == 3) {
+                    machine.money = machine.money - 2000
+                    machine.juice--;
+                    alert('오렌지주스 나왔습니당~')
+                }
+
+            }
+
+            // 5.잔돈을 반환하는 함수를 만들어줄 것 (changes)
+            // ex) 2300 원 => 천원짜리 2장, 오백원짜리 0개, 백원짜리 3개 
+            //     1700원 => 천원짜리 1장, 오백원짜리 1개, 백원짜리 2개 
+            // exportProduct 호출 밑에다가 changes라는 함수를 호출할 것! 
+            // "잔돈입니다~ 천원짜리 1장, 오백원짜리 1개, 백원짜리 2개입니다. "
+            const changes = () => {
+                console.log('현재 잔돈은', machine.money, '입니다.');
+
+                // if 잔돈 1700
+                let price1000 = parseInt(machine.money / 1000)
+                let price500 = parseInt((machine.money % 1000) / 500)
+                let price100 = parseInt(((machine.money % 1000) % 500) / 100)
+
+                alert(`잔돈입니다~ 천원짜리 ${price1000}장, 500원짜리 ${price500}개, 100원짜리 ${price100}개!`)
+            }
+
+            // 6. exportProduct : 호출
+            exportProduct()
+            changes()
+    </script>
+</body>
+
+</html>
