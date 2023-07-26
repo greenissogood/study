@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery 파일 불러오기 -->
+    <script src="../js/jquery-3.7.0.js"></script>
+    <!-- poketmon JS 파일 불러오기 -->
+    <!-- <script src="./poke_js.js"></script> -->
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        let speciesList = [];
+        let pokemonList = [];
+        let cnt = 0;
+
+        const getPokeData = (id) => {
+            let pokeURL = `https://pokeapi.co/api/v2/pokemon-species/${id}`;
+            $.ajax({
+                url: pokeURL,
+                async: false,
+                success: (result) => {
+                    console.log(result.names[2].name, result.genera[1].genus);
+                    speciesList.push({ name: result.names[2].name, genus: result.genera[1].genus });
+                },
+                error: () => {
+                    alert('요청실패');
+                }
+            })
+
+        }
+
+        const getPokeData2 = (id) => {
+            let pokeURL = `https://pokeapi.co/api/v2/pokemon/${id}`;
+            $.ajax({
+                url: pokeURL,
+                async: false,
+                success: (result) => {
+                    console.log(result.weight, result.height);
+                    pokemonList.push({ weight: result.weight, height: result.height })
+
+                },
+                error: () => {
+
+                }
+            })
+        }
+
+        const leftB = () => {
+            console.log('leftBtn')
+            console.log(speciesList)
+            console.log(cnt)
+
+            let resultHTML = `
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${cnt + 1}.png"
+                            alt="" class="poke-img">
+                        <span class="poke-id">${cnt + 1}</span>
+                        <span class="poke-name">${speciesList[cnt].name}</span>
+                        <span class="poke-species">${speciesList[cnt].genus}</span>
+                        <span class="poke-height">身長 : <span>${pokemonList[cnt].height / 10}</span> m</span>
+                        <span class="poke-weight">体重 : <span>${pokemonList[cnt].weight / 10}</span> kg</span>`;
+            cnt--;
+            $('.poke-card').html(resultHTML);
+
+
+        }
+        const rightB = () => {
+            console.log('rightBtn')
+
+            let resultHTML = `
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${cnt + 1}.png"
+                            alt="" class="poke-img">
+                        <span class="poke-id">${cnt + 1}</span>
+                        <span class="poke-name">${speciesList[cnt].name}</span>
+                        <span class="poke-species">${speciesList[cnt].genus}</span>
+                        <span class="poke-height">身長 : <span>${pokemonList[cnt].height / 10}</span> m</span>
+                        <span class="poke-weight">体重 : <span>${pokemonList[cnt].weight / 10}</span> kg</span>
+                    `;
+
+            cnt++;
+            // $('#poke-list').append(resultHTML)
+            $('.poke-card').html(resultHTML);
+        }
+        const sC = () => {
+            console.log('검색')
+            let pokeVal = parseInt($("#inputC").val()
+            )
+            let resultHTML = `
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeVal}.png"
+                            alt="" class="poke-img">
+                        <span class="poke-id">${pokeVal}</span>
+                        <span class="poke-name">${speciesList[pokeVal - 1].name}</span>
+                        <span class="poke-species">${speciesList[pokeVal - 1].genus}</span>
+                        <span class="poke-height">身長 : <span>${pokemonList[pokeVal - 1].height / 10}</span> m</span>
+                        <span class="poke-weight">体重 : <span>${pokemonList[pokeVal - 1].weight / 10}</span> kg</span>
+                    `;
+
+            cnt++;
+            // $('#poke-list').append(resultHTML)
+            $('.poke-card').html(resultHTML);
+        }
+
+        const drawPokemonCard = (species, pokemons) => {
+            for (let i = 0; i < species.length; i++) {
+                let resultHTML = `
+                    // <div class="poke-card">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i + 1}.png"
+                            alt="" class="poke-img">
+                        <span class="poke-id">${i + 1}</span>
+                        <span class="poke-name">${speciesList[i].name}</span>
+                        <span class="poke-species">${speciesList[i].genus}</span>
+                        <span class="poke-height">身長 : <span>${pokemonList[i].height / 10}</span> m</span>
+                        <span class="poke-weight">体重 : <span>${pokemonList[i].weight / 10}</span> kg</span>
+                        
+                    // </div>`;
+                $('#total').text(species.length);
+                // $('#poke-list')=resultHTML;
+
+            }
+        }
+        for (let i = 1; i < 152; i++) {
+
+            getPokeData(i);
+            getPokeData2(i);
+        }
+
+
+        // drawPokemonCard(speciesList, pokemonList);
+        // $(".btn1").on("click",leftB);
+        // $(".btn2").on("click",rightB);
+        // $('#inputBtn').on('click',sC);
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>ポケモン</h1>
+        <div id="inputDiv">
+            <input type="text" id="inputC"></input>
+            <button id="inputBtn" onclick="sC()">…</button>
+        </div>
+        <div id="wrap">
+
+            <button class="btn1" onclick="leftB()">左</button>
+
+            <div class="poke-card">
+
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+                    alt="" class="poke-img">
+                <span class="poke-id">1</span>
+                <span class="poke-name">이상해씨</span>
+                <span class="poke-species">씨앗포켓몬</span>
+                <span class="poke-height">身長 : <span>0.7</span> m</span>
+                <span class="poke-weight">体重 : <span>6.9</span> kg</span>
+            </div>
+            <button class="btn2" onclick="rightB()">右</button>
+        </div>
+</body>
+
+</html>
