@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+        /grade 라는 라우터를 만들어서 제출 버튼을 눌렀을 때
+        /grade 라우터에게 요청을 보내서 각 시험의 점수와 평균, 학점을 출력하라
+        단, 요청 방식은 post 로 진행하라.
+     -->
+    <form action="http://localhost:3006/grade" method="post">
+        <h1>학점계산기</h1>
+    <table width = '400px'>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" placeholder="이름을 입력해 주세요" name="name"></td>
+        </tr>
+        <tr>
+            <td>HTML점수</td>
+            <td><input type="text" name="html"></td>
+        </tr>
+        <tr>
+            <td>CSS점수</td>
+            <td><input type="text" name="css"></td>
+        </tr>
+        <tr>
+            <td>NodeJS점수</td>
+            <td><input type="text" name="ndjs"></td>
+        </tr>
+        <tr>
+            <td>ANDROID점수</td>
+            <td><input type="text" name="adr"></td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="submit" value="학점확인하기">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+
+</html>
