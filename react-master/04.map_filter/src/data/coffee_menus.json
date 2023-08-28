@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "category": "Coffee",
+      "name": "아메리카노(ICE)",
+      "price": "4,100원",
+      "img":"https://media.tenor.com/MHqoJiMPer0AAAAd/yejun-plave.gif"
+    },
+    {
+      "id": 2,
+      "category": "Coffee",
+      "name": "아메리카노(ICE)",
+      "price": "4,100원",
+      "img":"https://dcimg4.dcinside.co.kr/viewimage.php?id=3db1d130e0&no=24b0d769e1d32ca73dea80fa11d0283158b348b399fe02a3086d6925b6ea217ac9a93133e82db758055052cd8ccecc45a6264553ae82b2ee0c8e02e54b1af2dee03b58a8f77c1fea344806b54acd4ddf24c895755db224ba02f2bf2ace59d9"
+    },
+    {
+      "id": 3,
+      "category": "Ade",
+      "name": "사과에이드",
+      "price": "5,200원",
+      "img":"https://i.pinimg.com/550x/dd/aa/b5/ddaab54d2a567e34dfb7bf0af751d11f.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Coffee",
+      "name": "아메리카노(ICE)",
+      "price": "4,100원",
+      "img":"https://pbs.twimg.com/profile_images/1642155922054348800/vRjRLev2_400x400.jpg"
+    },
+    {
+      "id": 5,
+      "category": "Dessert",
+      "name": "다쿠아즈",
+      "price": "1,800원",
+      "img":"https://pbs.twimg.com/media/Fw5Zz7WacAA9Zq3.jpg"
+    },
+    {
+      "id": 6,
+      "category": "Dessert",
+      "name": "마카롱",
+      "price": "2,500원",
+      "img":"https://i.namu.wiki/i/KG5EzVlnX4q7z2mnpdxCEayCO3er80J0NzIUgqrVVfTUF8vQ3eXvTJxkSf3G8OtCB-f9GwFrwn1Ci2cUiV-Llw.gif"
+    },
+    {
+      "id": 7,
+      "category": "Coffee",
+      "name": "아메리카노(ICE)",
+      "price": "4,100원",
+      "img":"https://i.namu.wiki/i/tuJT-mpiRFW0elk0Qr5zxD19NPzJuMz7S8BEzrEWRVgD9fK-jzNiSQV7cxDRTluB-T9gcy9VYHbbiNaD8W21_w.gif"
+    },
+    {
+      "id": 8,
+      "category": "Dessert",
+      "name": "크림빵",
+      "price": "1,800원",
+      "img":"https://media.tenor.com/5eNvvnZmTw4AAAAd/%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B8%8C-%EB%85%B8%EC%95%84.gif"
+    },
+    {
+        "id": 9,
+        "category": "bakery",
+        "name": "크림빵",
+        "price": "1,800원",
+        "img":"https://media.bunjang.co.kr/product/231715114_1_1690967108_w360.jpg"
+      }
+  ]

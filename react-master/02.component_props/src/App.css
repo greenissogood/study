@@ -1,0 +1,40 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+}
+
+.menu-item{
+  border: 200px solid lightskyblue;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.plave{
+  border: 15px solid lightcyan;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5rem;
+}
+.idpw{
+  background-color: lightpink;
+  margin: 30px;
+  border: 5px solid black;
+  border-radius: 5rem;
+}
+
+.ippw:hover{
+  background-color: lightcoral;
+}
+
+.succe{
+  color: aqua;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}

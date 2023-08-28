@@ -1,0 +1,33 @@
+.menu-list{
+    display: flex;
+    gap : 10px;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+.btn-primary{
+    background-color: rgb(29, 138, 168);
+    color: black;
+    border: black solid 1px;
+  }
+  
+  .btn-primary:hover{
+      background-color: rgb(205, 208, 201);
+      color: black;
+  }
+  .card{
+    margin: 50px;
+    box-shadow: 10px 10px 10px rgb(209, 212, 206);
+  }
+  .cardStyle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card-body{
+    box-shadow: 10px 10px 10px rgb(209, 212, 206);
+  }
+img{
+  width: 100%;
+  height: 290px;
+}

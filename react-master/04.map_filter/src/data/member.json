@@ -1,0 +1,7 @@
+[
+    { "id": "1", "name" : "남예준", "task": "Leader" , "age" : 21},
+    { "id": "2", "name": "한노아", "task": "Main-Vocal", "age" : 22},
+    { "id": "3", "name": "채봉구", "task": "Main-Dancer","age" : 21},
+    { "id": "4", "name": "도은호", "task": "Rapper","age" : 20},
+    { "id": "5", "name": "유하민", "task": "Maknae","age" : 18}
+  ]

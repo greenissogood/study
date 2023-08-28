@@ -1,0 +1,23 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+  }
+  .button-area > button{
+    margin-left:20px
+  }
+  .board-area{
+    display:flex;
+    justify-content: center;
+  }
+  .board-area > div{
+    margin-left: 20px;
+  }
+  .board{
+    margin-top: 20px;
+  }
+  .score-area{
+    margin-top: 20px;
+  }

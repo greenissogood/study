@@ -1,0 +1,20 @@
+.btn-primary{
+  background-color: yellow;
+  color: black;
+}
+
+.btn-primary:hover{
+    background-color: chartreuse;
+    color: black;
+}
+.card{
+  margin: 50px;
+}
+.cardStyle{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-body:hover{
+  box-shadow: 5px 5px rgb(154, 227, 17), 10px 10px 10px chartreuse;
+}
