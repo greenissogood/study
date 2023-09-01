@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <img id="target-image" src="./CSS/img/하츄핑.png" alt="Your Image">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide><img src="./CSS/img/x티니핑.png" alt=""></swiper-slide>
+    <swiper-slide><img src="./CSS/img/하츄핑.png" alt=""></swiper-slide>
+  </swiper-container>
+</body>
+
+</html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    swiper-container {
+        width: 30%;
+        height: 30%;
+    }
+
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js">
+
+    
+    const targetImage = document.getElementById("target-image");
+
+    targetImage.onload = function () {
+        const averageColor = getAverageColor(targetImage);
+        document.body.style.backgroundColor = averageColor;
+    };
+
+    function getAverageColor(image) {
+        const canvas = document.createElement("canvas");
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0, image.width, image.height);
+
+        const imageData = ctx.getImageData(0, 0, image.width, image.height).data;
+
+        let sumRed = 0;
+        let sumGreen = 0;
+        let sumBlue = 0;
+
+        for (let i = 0; i < imageData.length; i += 4) {
+            sumRed += imageData[i];
+            sumGreen += imageData[i + 1];
+            sumBlue += imageData[i + 2];
+        }
+
+        const pixelCount = imageData.length / 4;
+        const averageRed = Math.floor(sumRed / pixelCount);
+        const averageGreen = Math.floor(sumGreen / pixelCount);
+        const averageBlue = Math.floor(sumBlue / pixelCount);
+
+        return `rgb(${averageRed}, ${averageGreen}, ${averageBlue})`;
+        </script>
+    }

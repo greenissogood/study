@@ -1,0 +1,14 @@
+@import url('CSS/main.css');
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 231, 235);
+    color: white;
+    height: 100px;
+}
+

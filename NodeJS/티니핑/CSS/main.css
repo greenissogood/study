@@ -1,0 +1,30 @@
+.nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+.navTitle{
+    font-size: 30px;
+}
+.navTitle a{
+    text-decoration: none;
+    color: black;
+}
+
+.navList{
+    display: flex;
+    list-style: none;
+    width: 300px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.img1{
+    width: 300px;
+    height: 300px;
+}

@@ -1,0 +1,52 @@
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.logo_search{
+    background-color: rgb(236, 252, 211);
+
+}
+.logo_search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 130px;
+}
+.mainPng{
+    width: 0px;
+}
+/* .header_wrap {
+    text-align: right; /* 부모 요소를 기준으로 내부 요소를 가운데 정렬 */
+
+.login_mypage{
+    text-align: right;
+    margin-top: -130px;
+}
+
+.searchBox{
+    width: 220px;
+    margin: auto;
+    margin-top: -65px;
+}
+
+.row-cate {
+    display: flex; /* flex container로 설정하여 요소들을 가로로 나열 */
+    margin-top: 100px;
+    margin-left: 700px;
+}
+
+.row-cate ul {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    display: flex; /* flex container로 설정하여 li 요소들을 가로로 나열 */
+}
+
+.row-cate li {
+    margin-right: 20px; /* 각 메뉴들 사이의 간격 설정 */
+}
+
+.row-cate li:last-child {
+    margin-right: 0; /* 마지막 메뉴에는 오른쪽 마진을 적용하지 않음 */
+}

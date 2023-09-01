@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/user/SelectOne">
+        <input name='selectone' placeholder="아이디를 입력해 주세요.">
+        <input type="submit">
+    </form>
+    <!-- 
+        nunjucks 문법에서 값이 없을 때에는 출력 자체가 안 된다.
+        null, undefined
+    -->
+    ID : {{userInfo.ID}}
+    PW : {{userInfo.PW}}
+    NICK : {{userInfo.NICK}}
+
+    {%set data =10%}
+    <script>
+        //nunjucks 변수를 js에서 사용하는 법~!
+       let data  = '{{userInfo.id}}'
+       console.log(data) 
+    </script>
+
+    <p>아이디 패스워드 닉네임 값을 밑으로 보여 줘라</p>
+</body>
+
+</html>
