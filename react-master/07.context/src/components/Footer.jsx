@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext} from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 
 export const Footer = () => {
-  const [isDark, setIsdark] = useState()
-  const [user, setUser] = useState()
+
+  const {isDark, setIsdark} = useContext(ThemeContext)
 
 
   return (
-    <div className='footer'>
-        <button className='button' onClick={()=>setIsdark} style={{background:black}}>Dark Mode</button>
+    <div className='footer' style={{background:isDark? 'black':'white'}}>
+        <button className='button' onClick={()=>setIsdark(!isDark)} >Dark Mode</button>
     </div>
   )
 }

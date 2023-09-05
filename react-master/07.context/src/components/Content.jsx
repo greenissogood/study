@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 
 const Content = () => {
+
+  const {isDark, user} = useContext(ThemeContext)
+  // 가져다 쓰기만 하면 됨 전역으로 쓸 수 있게 있는 게 useContext
   return (
-    <div className='content'> OOO님, 좋은 하루</div>
+    <div className='content' style={{
+      backgroundColor : isDark? 'black':'white',
+      color : isDark? 'white':'black'
+    }}> {user}님, 좋은 하루</div>
   )
 }
 
