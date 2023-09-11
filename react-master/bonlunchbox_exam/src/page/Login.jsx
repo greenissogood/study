@@ -1,9 +1,9 @@
 import React from "react";
-import {useNavigate, Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {useRef} from 'react'
 
+//submit 버튼 클릭 시, 로그인 상태값을 전환하고 메인 페이지로 이동되도록 구현하시오.
 const Login = ({authenticate, setAuthenticate}) => {
-  //submit 버튼 클릭 시, 로그인 상태값을 전환하고 메인 페이지로 이동되도록 구현하시오.
 
     const idRef = useRef()
     const pwRef = useRef()
@@ -11,7 +11,7 @@ const Login = ({authenticate, setAuthenticate}) => {
   const navigate = useNavigate()
 
 
-  const goToMain = () =>{
+  const goToMain = (e) =>{
     if(idRef.current.value === 'test' && pwRef.current.value === '1234'){
       console.log(authenticate);
       navigate('/')
@@ -20,6 +20,12 @@ const Login = ({authenticate, setAuthenticate}) => {
     }else{
       navigate('/login')
     }
+
+    // const handleSubmit =(e)=>{
+      // 이벤트 동작을 중지시키는 함수
+      e.preventDefault()
+    setAuthenticate(true)
+    // navigate('/')
   }
  
 
