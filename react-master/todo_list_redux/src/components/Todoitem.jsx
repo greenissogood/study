@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { FaCheckCircle, FaRegCircle } from 'react-icons/fa'
 
-const Todoitem = ({ todo, todos, setTodos }) => {
-  console.log(todo, todos, setTodos)
+// dispatch랑 action 한쌍
+import { useDispatch, useSelector} from 'react-redux'
+import { TodoReducerActions } from '../redux/reducers/todoSlice'
+
+const Todoitem = ({ todo, setTodos }) => {
+  console.log(todo)
+
+  const todos = useSelector((state) => state.todo.todos)
+  const dispatch = useDispatch()
 
   const handleCheckChange = () => {
-    let updateList = todos.map((item) => ({
-      ...item,
-      complete: item.id === todo.id ? !item.complete : item.complete,
-      // 누르면 완료된 투두가 완료된 곳으로 내려가야 됨
-    }))
-    setTodos(updateList)
+    dispatch(TodoReducerActions.checkChangeTodo({ id: todo.id }))
   }
 
   // edited : 사용자가 수정 버튼을 눌렀는지에 대한 상태
@@ -30,27 +32,21 @@ const Todoitem = ({ todo, todos, setTodos }) => {
 
   //수정 완료 기능 구현
   const handleSubmitClick = () => {
-    let updateList = todos.map((item) => ({
-      ...item,
-      text: item.id === todo.id ? newText : item.text,
-    }))
-    setTodos(updateList)
+    dispatch(TodoReducerActions.textChangeTodo({ id: todo.id, text: newText }))
     setEdited(false)
   }
 
   //   사용자가 입력한 값을 newText에 저장
   //   이벤트 요소
-    // const handleEditText=(e)=>{
-    //   setNewText(e.target.value)
-    //   console.log(newText);
-    // }
+  // const handleEditText=(e)=>{
+  //   setNewText(e.target.value)
+  //   console.log(newText);
+  // }
 
   const handleDelClick = (id) => {
     if (window.confirm('ㄹㅇ삭제?')) {
       console.log('삭제할 todo의 id:', id)
-      let updateList = todos.filter((item) => item.id !== id)
-      // 두 줄 이상이 아니라면 ((item)=>여기에 괄호 안 써도 됨)
-      setTodos(updateList)
+      dispatch(TodoReducerActions.deleteTodo({ id: id }))
     }
   }
 
@@ -77,9 +73,9 @@ const Todoitem = ({ todo, todos, setTodos }) => {
           type="text"
           className="todo-item-edit-input"
           value={newText}
-        //   onChange={handleEditText}
+          //   onChange={handleEditText}
           onChange={(e) => setNewText(e.target.value)}
-        //   이벤트가 일어나는 현재 객체의 값을 가지고 온다는 뜻
+          //   이벤트가 일어나는 현재 객체의 값을 가지고 온다는 뜻
         />
       ) : (
         //const todo에 있는 내용을 가지고 오는데 todo에 입력한 text 내용을 들고온다
@@ -93,8 +89,7 @@ const Todoitem = ({ todo, todos, setTodos }) => {
       )}
 
       {/* ~(todo.complete)? ~라면? 참:거짓*/}
-      {todo.complete ? null : //    조건 ? true : false에 조건을 하나 더 넣으려면?
-      //    조건? true : (조건? true : false)
+      {todo.complete ? null : //    조건? true : (조건? true : false) //    조건 ? true : false에 조건을 하나 더 넣으려면?
       // 할 일 완료 상태? null : (수정상태? 수정완료버튼 : 수정버튼)
       //                          edited 새로 만드는 버튼 : 기존에 있는 버튼
       edited ? (

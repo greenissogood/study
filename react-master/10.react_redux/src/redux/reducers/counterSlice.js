@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// createSlice() : state, reducer를 관리하는 함수
+// createSlice() : state, reducer(둘 다)를 관리하는 함수
 // - state 초기화
 // - state를 변경하는 함수 정의 --> reducer
 
+// name : reducer의 특정 이름을 정의하는 속성
+// initialState : state를 초기화하는 속성
+// reducers : 컴포넌트에서 state 변경 요청 시 수행하는 Action 기능을 정의하는 속성
 export const counterSlice = createSlice({
     name: 'counter',
     initialState:{
@@ -36,7 +39,7 @@ export const counterSlice = createSlice({
 
 // 컴포넌트에서 reducer 함수를 실행할 수 있게 내보내기
 // 여기서 내보내 줘야만 사용 가능 2.
-// export const {increment,decrement,incrementByAmount} = counterSlice.actions
+// export const {increment,decrement,incremyentByAmount} = counterSlice.actions
 export const CounterReducerActions = counterSlice.actions
 
 // store에서 접근할 수 있도록 내보내기
