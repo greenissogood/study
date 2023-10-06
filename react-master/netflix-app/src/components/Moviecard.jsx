@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Badge } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 
 const Moviecard = ({ movies, genre }) => {
   console.log("[MovieCard] : ", movies);
@@ -21,14 +22,17 @@ const Moviecard = ({ movies, genre }) => {
 
   return (
     <div style={div_style} className="movie-card">
+      <Link to = {`/movies/${movies.id}`}>
       <div className="imgHover">
         <h1>{movies.title}</h1>
         <div>
+          {/* find() : 일치한 정보들 중 첫번째 요소만 반환하는 함수 */}
           {movies.genre_ids.map((id) => {
             // findGenreById 함수를 사용하여 genre 데이터에서 해당 id에 맞는 데이터를 찾음
             const genreData = findGenreById(id);
             return (
               <Badge bg="danger" key={id} style={{ margin: '2px' }}>
+                {/* {genreList.find((item)=>item.id===id).name} */}
                 {genreData ? genreData.name : 'Unknown Genre'}
               </Badge>
             );
@@ -46,6 +50,7 @@ const Moviecard = ({ movies, genre }) => {
           </span>
         </div>
       </div>
+            </Link>
     </div>
   );
 };

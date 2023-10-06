@@ -25,6 +25,7 @@ const movieSlice = createSlice({
             state.topRatedMovies = payload.topRated.results
             state.upcomingMovies = payload.upcoming.results
             state.genreList = payload.genre.genres
+            // 배열이 list에 저장
         }
 
     }

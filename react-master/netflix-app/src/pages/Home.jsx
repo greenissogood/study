@@ -19,6 +19,8 @@ const Home = () => {
   const {popularMovies, topRatedMovies, upcomingMovies,genreList} = useSelector(
     (state)=>state.movie
   )
+  // useSelector로 선택해서 값을 꺼내오겠다.
+  // {} 객체들이고 state.movie라는 state를 꺼내오겠다.
 
   console.log("[Home.jsx]:", popularMovies);
 

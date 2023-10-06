@@ -3,6 +3,10 @@ body{
   color: white;
   
 }
+.container{
+  display: flex;
+  flex-direction: column;
+}
 .nav-item{
   text-decoration: none;
   color: white;
@@ -43,14 +47,67 @@ body{
 }
 
 
-.movie-card:hover >.imgHover{
+.movie-card:hover .imgHover{
   transition: 0.3s ease-in-out;
   opacity: 1;
 }
 
-/* .movie-card> .imgHover> .genres,
-.movie-card> .imgHover> .info
+.movie-card> a{
+  color: white;
+  text-decoration: none;
+}
+
+/* .movie-card .imgHover > .genres,
+.movie-card .imgHover > .info
 {
   display: flex;
   gap : 15px
 } */
+
+/* MovieDeatils */
+.movieDetails{
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+}
+
+.info{
+  gap: 50px;
+  /* padding: 50px; */
+}
+
+.movieDetails .poster > img{
+  width: 500px;
+}
+
+.movieDetails .genre {
+  display: flex;
+  gap: 3px;
+}
+
+.movieDetails .genre +h1{
+  font-size: 3em;
+}
+
+.movieDetails h4 + div{
+  display: flex;
+  gap: 15px;
+  border-bottom: 3px solid white;
+
+}
+.movieDetails-explain{
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/* Review*/
+.reviewBox{
+  border: 3px solid white;
+  padding: 30px;
+}
+
+.reviewItem{
+  border-bottom: 3px solid white;
+  margin-bottom: 15px;
+  padding: 30px;
+}
