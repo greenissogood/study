@@ -17,7 +17,7 @@ const AppSample = () => {
 
   let suc = ''
 
-  if (id == 'fucku' && pw == '123') {
+  if (id === 'fucku' && pw === '123') {
     suc = <LoginSuccess />
   } else {
     suc = <LoginFail id={id} pw={pw}/>
